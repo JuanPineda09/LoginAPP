@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="54dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/headerysidebar" />
+
+        <ImageView
+            android:id="@+id/backHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="32dp"
+            android:src="@drawable/arrowback" />
+
+        <ImageView
+            android:id="@+id/logoHomeLogin"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="170dp"
+            android:background="@drawable/rounded_logo"
+            android:elevation="10dp"
+            android:padding="40dp"
+            android:src="@drawable/logosmall" />
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="40dp"
+            android:text="Login"
+            android:textSize="30dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:elevation="10dp"
+            android:padding="10dp"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="Correo"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:inputType="textEmailAddress"
+            android:hint="example@mail.com"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="100dp"
+            android:layout_gravity="center"
+            android:text="Contraseña"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            />
+        <EditText
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="130dp"
+            android:layout_gravity="center"
+            android:inputType="textWebPassword"
+            android:hint="************"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textAlignment="center"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnIngreso"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="210dp"
+            android:background="@drawable/rounded_style"
+            android:backgroundTint="#000000"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:text="Ingresar"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            app:backgroundTint="@color/white" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:src="@drawable/headerysidebar" />
+
+    </FrameLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
