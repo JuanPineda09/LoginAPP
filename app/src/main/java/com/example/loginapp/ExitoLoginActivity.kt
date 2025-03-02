@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class ExitoLoginActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,7 +27,7 @@ class ExitoLoginActivity : AppCompatActivity() {
         val mostrarUsuario: TextView = findViewById(R.id.mostrarUsuario)
         val mostrarCorreo: TextView = findViewById(R.id.mostrarCorreo)
         val mostrarDate: TextView = findViewById(R.id.mostrarDate)
-        val mostrarFavoritos: TextView = findViewById(R.id.mostrarFavoritos)
+        val backHome: AppCompatButton = findViewById(R.id.backHome)
 
         mostrarNombre.text = "¡Bienvenido ${nombreGuardado}!"
         mostrarUsuario.text = "Usuario: ${usuarioGuardado}"
@@ -40,6 +40,12 @@ class ExitoLoginActivity : AppCompatActivity() {
             val netxWrong = Intent(this, WrongActivity::class.java)
             startActivity(netxWrong)
         }
+
+        backHome.setOnClickListener {
+            val backHome = Intent(this, MainActivity::class.java)
+            startActivity(backHome)
+        }
+
 
     }
 }
