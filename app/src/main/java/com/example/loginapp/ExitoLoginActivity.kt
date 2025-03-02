@@ -3,6 +3,8 @@ package com.example.loginapp
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +13,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class ExitoLoginActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId", "WrongViewCast")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,7 +28,7 @@ class ExitoLoginActivity : AppCompatActivity() {
         val mostrarUsuario: TextView = findViewById(R.id.mostrarUsuario)
         val mostrarCorreo: TextView = findViewById(R.id.mostrarCorreo)
         val mostrarDate: TextView = findViewById(R.id.mostrarDate)
-        val backHome: AppCompatButton = findViewById(R.id.backHome)
+        val backHome: ImageView = findViewById(R.id.backHome)
 
         mostrarNombre.text = "¡Bienvenido ${nombreGuardado}!"
         mostrarUsuario.text = "Usuario: ${usuarioGuardado}"
@@ -35,10 +36,10 @@ class ExitoLoginActivity : AppCompatActivity() {
         mostrarDate.text = "Fecha de Nacimiento: ${fechaNacimientoGuardado}"
 
 
-        var btnNextWrong : AppCompatButton = findViewById(R.id.btnNextWrong);
+        var btnNextWrong : Button = findViewById(R.id.btnNextWrong);
         btnNextWrong.setOnClickListener {
-            val netxWrong = Intent(this, WrongActivity::class.java)
-            startActivity(netxWrong)
+            val nextWrong = Intent(this, WrongActivity::class.java)
+            startActivity(nextWrong)
         }
 
         backHome.setOnClickListener {
