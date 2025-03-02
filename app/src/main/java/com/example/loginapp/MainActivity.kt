@@ -3,13 +3,13 @@ package com.example.loginapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
+import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.home)
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
@@ -18,10 +18,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(nextLogin)
         }
         val btnRegister = findViewById<Button>(R.id.btnRegistro)
+        val btnBackHome : ImageView = findViewById(R.id.backApp);
 
         btnRegister.setOnClickListener{
-            val nextRegister = Intent(this, RegisterActivity::class.java)
+            val nextRegister = Intent( this, RegisterActivity::class.java)
             startActivity(nextRegister)
+        }
+
+        btnBackHome.setOnClickListener{
+            finish()
         }
     }
 }
